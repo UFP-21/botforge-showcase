@@ -1,96 +1,154 @@
-# BotForge
+# BotForge - AI Bot Builder Showcase
 
-## О проекте
+BotForge is a showcase project for an AI bot builder that helps create business AI assistants with knowledge base support, retrieval flow and multi-provider LLM integration.
 
-BotForge — showcase-проект конструктора AI-ботов-консультантов с поддержкой базы знаний и мультипровайдерных LLM.
+The idea of the project is simple: a user can create an AI assistant, upload business documents, connect a knowledge base, test responses and prepare the bot for use in a website or Telegram workflow.
 
-Идея проекта: пользователь может без кода создать бота, загрузить документы, подключить базу знаний, протестировать ответы и подготовить бота для сайта или Telegram.
+This repository is published as a showcase. It demonstrates the product concept, system architecture, core workflows and my role in designing the solution. Private implementation details, API keys, real user data, internal workflows and production infrastructure are not published.
 
-## Какую задачу решает
+## Problem
 
-Проект решает задачу быстрого запуска бизнес-ассистентов для консультаций, продаж и поддержки без разработки отдельного AI-решения с нуля под каждый сценарий.
+Many small and medium businesses want to use AI assistants for support, sales, onboarding or internal knowledge access, but building a separate AI solution from scratch for every use case is slow and expensive.
 
-## Что сделано лично мной
+BotForge addresses this by providing a structured workflow for creating configurable AI bots that can answer based on uploaded documents and business-specific knowledge.
 
-- проектирование логики продукта
-- проектирование backend-архитектуры
-- логика работы AI-ботов поверх базы знаний
-- интеграция нескольких LLM-провайдеров
-- проектирование flow загрузки документов и retrieval
-- сценарии тестирования ответов бота
-- логирование и аналитика взаимодействий
+## Solution
 
-## Ключевые функции
+BotForge is designed as a product-style AI bot builder with the following workflow:
 
-- создание AI-ботов без кода
-- загрузка и обработка документов
-- база знаний для бота
-- ответы по контексту через retrieval
-- поддержка нескольких LLM-провайдеров
-- тестирование ответов
-- подготовка Telegram-версии или встраивания на сайт
-- логи и аналитика
+1. Create a new AI assistant.
+2. Configure bot behavior and business context.
+3. Upload documents for the knowledge base.
+4. Process documents for retrieval.
+5. Connect one or more LLM providers.
+6. Test bot responses.
+7. Review logs and analytics.
+8. Prepare the bot for Telegram or website integration.
 
-## Стек
+The key focus is not only LLM integration, but the complete backend and product flow around it: knowledge base handling, retrieval logic, bot configuration, testing, logs and analytics.
 
-- React + TypeScript
-- Node.js / Express
-- PostgreSQL
-- Drizzle ORM
-- FAISS
-- OpenAI
-- Anthropic
-- Google Gemini
-- DeepSeek
-- GigaChat
-- PDF processing
+## My Role
 
-## Архитектура
+My work on this project focused on:
 
-Основные слои системы:
+* product logic design
+* backend architecture planning
+* AI bot workflow design
+* knowledge base and retrieval flow
+* multi-provider LLM integration concept
+* document upload and processing flow
+* response testing scenarios
+* logging and analytics workflow
+* showcase structure for portfolio presentation
 
-1. Web-интерфейс для настройки бота
-2. Backend API
-3. Хранилище проектов, пользователей и настроек
-4. Модуль загрузки и обработки документов
-5. Knowledge base / retrieval
-6. Слой подключения LLM-провайдеров
-7. Логи, тестирование и аналитика
+## Key Features
 
-## Как работает основной сценарий
+* AI bot creation workflow
+* knowledge base support
+* document upload and processing
+* retrieval-based answer generation
+* multi-provider LLM integration
+* bot behavior configuration
+* response testing interface
+* bot management dashboard
+* logs and analytics
+* preparation for Telegram or website deployment
 
-1. Пользователь создает нового AI-бота.
-2. Загружает документы или материалы для базы знаний.
-3. Система обрабатывает документы и готовит данные для поиска.
-4. Бот получает вопрос пользователя.
-5. Retrieval-слой подбирает релевантный контекст.
-6. LLM формирует ответ с учетом базы знаний.
-7. Ответ можно протестировать, посмотреть в логах и улучшить настройки.
+## Tech Stack
 
-## Скриншоты
+* React
+* TypeScript
+* Node.js
+* Express
+* PostgreSQL
+* Drizzle ORM
+* FAISS
+* OpenAI API
+* Anthropic Claude API
+* Google Gemini API
+* DeepSeek API
+* GigaChat API
+* PDF processing
+* Knowledge base / retrieval workflow
 
-![Главный экран](assets/main-screen.jpg)
+## Architecture Overview
 
-![Создание бота](assets/create-bot.jpg)
+The system is designed around several core layers:
 
-![API-подключение](assets/api-integration.jpg)
+1. **Web interface**
+   Used for creating bots, managing settings, uploading documents, testing responses and viewing analytics.
 
-![Управление ботами](assets/bot-management.jpg)
+2. **Backend API**
+   Handles bot configuration, project data, knowledge base operations, LLM provider connections and application logic.
 
-![Аналитика](assets/analytics.jpg)
+3. **Database layer**
+   Stores projects, bots, users, settings, logs and metadata.
 
-## Статус проекта
+4. **Document processing layer**
+   Handles uploaded files, extracts text and prepares content for retrieval.
 
-Репозиторий опубликован в showcase-формате.
+5. **Knowledge base / retrieval layer**
+   Selects relevant context from processed documents and passes it to the LLM layer.
 
-Цель репозитория — показать архитектуру, ключевые сценарии и мою роль в разработке. Часть приватной инфраструктурной логики, ключи, реальные данные и внутренние интеграции не публикуются.
+6. **LLM provider layer**
+   Provides a unified integration point for multiple LLM providers.
 
-## Дополнительно
+7. **Testing, logs and analytics layer**
+   Helps test bot behavior, inspect responses and review usage patterns.
 
-При необходимости могу отдельно показать:
+## Main User Flow
 
-- архитектурную схему
-- backend-процесс
-- примеры экранов
-- описание RAG и логики базы знаний
-- детали подключения LLM-провайдеров
+1. The user creates a new AI bot.
+2. The user uploads documents or business materials.
+3. The system processes the documents and prepares them for knowledge base search.
+4. The bot receives a user question.
+5. The retrieval layer selects relevant context.
+6. The LLM generates an answer using the selected context and bot settings.
+7. The user reviews the response, checks logs and improves the configuration if needed.
+
+## Screenshots
+
+The repository includes visual materials in the `assets` folder.
+
+Suggested screenshot captions:
+
+* Main dashboard
+* Create AI bot
+* LLM provider connection
+* Bot management
+* Logs and analytics
+
+## What This Project Demonstrates
+
+This project demonstrates my ability to work with applied AI product architecture, not only isolated API calls.
+
+It shows experience with:
+
+* designing AI assistant workflows
+* structuring RAG-style knowledge base logic
+* planning backend architecture for AI products
+* integrating multiple LLM providers
+* building document-based AI flows
+* thinking through testing and observability
+* presenting private or partially private projects safely as a showcase
+
+## Repository Status
+
+This repository is a showcase repository.
+
+It does not include:
+
+* production API keys
+* `.env` files
+* real user data
+* private prompts
+* production databases
+* internal business workflows
+* sensitive logs
+* private infrastructure details
+
+Additional technical details, architecture notes or workflow explanations can be provided separately when relevant.
+
+## Related Skills
+
+Python, FastAPI, RAG, knowledge bases, LLM integration, AI assistants, backend architecture, document processing, retrieval workflows, API integrations, prompt engineering, product logic, logs and analytics.
