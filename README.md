@@ -106,17 +106,72 @@ The system is designed around several core layers:
 6. The LLM generates an answer using the selected context and bot settings.
 7. The user reviews the response, checks logs and improves the configuration if needed.
 
+
+
 ## Screenshots
 
-The repository includes visual materials in the `assets` folder.
+### Dashboard
 
-Suggested screenshot captions:
+![BotForge Dashboard](assets/screenshots/dashboard.png)
 
-* Main dashboard
-* Create AI bot
-* LLM provider connection
-* Bot management
-* Logs and analytics
+Main BotForge dashboard for managing AI assistants, projects and product workflow.
+
+---
+
+### Create and Configure AI Assistant
+
+![Create and Configure AI Assistant](assets/screenshots/create-bot-basic-information.png)
+
+Bot setup flow with business context, use case and assistant description.
+
+---
+
+### Multi-Provider LLM Setup
+
+![Multi-Provider LLM Setup](assets/screenshots/llm-provider-setup.png)
+
+Unified LLM provider selection with support for OpenAI, Anthropic, Google Gemini, DeepSeek and other model providers.
+
+---
+
+### System Prompt Configuration
+
+![System Prompt Configuration](assets/screenshots/system-prompt-configuration.png)
+
+Assistant behavior, role, response rules and safety constraints configured through a structured system prompt.
+
+---
+
+### Knowledge Base and Document Processing
+
+![Knowledge Base and Document Processing](assets/screenshots/knowledge-base-documents.png)
+
+Uploaded business documents are prepared for retrieval-based answers and converted into a searchable knowledge base.
+
+---
+
+### Bot Design Preview
+
+![Bot Design Preview](assets/screenshots/bot-design-preview.png)
+
+Visual bot configuration with preview card, color settings and generated assistant metadata.
+
+---
+
+### Bot Testing
+
+![Bot Testing](assets/screenshots/bot-testing-returns.png)
+
+Testing screen showing how the assistant responds to customer questions using the configured bot profile and knowledge base.
+
+---
+
+### Publishing Options
+
+![Publishing Options](assets/screenshots/publish-options.png)
+
+Deployment options for using the assistant as a web widget or Telegram bot.
+
 
 ## What This Project Demonstrates
 
