@@ -1,60 +1,100 @@
 # BotForge - AI Bot Builder Showcase
 
-BotForge is a showcase project for an AI bot builder that helps create business AI assistants with knowledge base support, retrieval flow and multi-provider LLM integration.
+BotForge is a showcase repository for an AI bot builder designed to create business AI assistants with knowledge base support, retrieval flow and multi-provider LLM integration.
 
-The idea of the project is simple: a user can create an AI assistant, upload business documents, connect a knowledge base, test responses and prepare the bot for use in a website or Telegram workflow.
+The product idea is simple: a user can create an AI assistant, configure its behavior, upload business documents, connect a knowledge base, test responses and prepare the bot for use as a website widget or Telegram bot.
 
-This repository is published as a showcase. It demonstrates the product concept, system architecture, core workflows and my role in designing the solution. Private implementation details, API keys, real user data, internal workflows and production infrastructure are not published.
+## Repository Status
+
+This repository is published as a portfolio showcase / case study.
+
+The full production source code is not public.
+
+This repository is intended to present:
+
+* product concept
+* user workflow
+* AI bot builder logic
+* knowledge base and retrieval flow
+* multi-provider LLM integration approach
+* screenshots of the working interface
+* architecture and implementation decisions
+* safe public presentation of a private AI product
+
+The original implementation contains private logic, API integrations, environment configuration, internal workflows and sensitive data that are not suitable for public release.
+
+This repository does not include:
+
+* full production source code
+* API keys or `.env` files
+* real user data
+* private prompts
+* production databases
+* internal business workflows
+* sensitive logs
+* private infrastructure details
 
 ## Problem
 
-Many small and medium businesses want to use AI assistants for support, sales, onboarding or internal knowledge access, but building a separate AI solution from scratch for every use case is slow and expensive.
+Many small and medium businesses want to use AI assistants for customer support, sales, onboarding, internal documentation and knowledge access.
 
-BotForge addresses this by providing a structured workflow for creating configurable AI bots that can answer based on uploaded documents and business-specific knowledge.
+However, building a separate AI assistant from scratch for every business use case is slow and expensive. A typical solution requires document processing, prompt configuration, retrieval logic, LLM integration, testing, logging and deployment preparation.
+
+BotForge addresses this problem by providing a structured workflow for creating configurable AI assistants that can answer questions using uploaded documents and business-specific knowledge.
 
 ## Solution
 
-BotForge is designed as a product-style AI bot builder with the following workflow:
+BotForge is designed as a product-style AI bot builder.
+
+The main workflow:
 
 1. Create a new AI assistant.
 2. Configure bot behavior and business context.
-3. Upload documents for the knowledge base.
-4. Process documents for retrieval.
-5. Connect one or more LLM providers.
-6. Test bot responses.
-7. Review logs and analytics.
-8. Prepare the bot for Telegram or website integration.
+3. Select an LLM provider and model.
+4. Write or generate a system prompt.
+5. Upload documents for the knowledge base.
+6. Process documents for retrieval.
+7. Test bot responses.
+8. Review configuration and behavior.
+9. Prepare the bot for website or Telegram deployment.
 
-The key focus is not only LLM integration, but the complete backend and product flow around it: knowledge base handling, retrieval logic, bot configuration, testing, logs and analytics.
+The key focus is not only LLM integration. The project demonstrates the complete product flow around an AI assistant: bot configuration, knowledge base handling, retrieval logic, prompt setup, testing, design preview and publishing options.
 
 ## My Role
 
 My work on this project focused on:
 
-* product logic design
+* product workflow design
+* AI assistant creation flow
 * backend architecture planning
-* AI bot workflow design
 * knowledge base and retrieval flow
 * multi-provider LLM integration concept
-* document upload and processing flow
+* document upload and processing workflow
+* system prompt configuration flow
 * response testing scenarios
-* logging and analytics workflow
-* showcase structure for portfolio presentation
+* logging and analytics concepts
+* portfolio-safe showcase structure
 
 ## Key Features
 
-* AI bot creation workflow
+* AI assistant creation workflow
+* bot behavior configuration
+* system prompt setup
 * knowledge base support
 * document upload and processing
 * retrieval-based answer generation
-* multi-provider LLM integration
-* bot behavior configuration
+* multi-provider LLM setup
 * response testing interface
-* bot management dashboard
-* logs and analytics
-* preparation for Telegram or website deployment
+* bot design preview
+* publishing options for web widget and Telegram bot
+* logs and analytics concept
+* product-style management dashboard
 
-## Tech Stack
+## Tech Stack and Architecture
+
+The original project architecture is based on a web application with backend logic, database storage, file-processing workflow and LLM provider integrations.
+
+Main technologies and concepts used in the project:
 
 * React
 * TypeScript
@@ -62,51 +102,62 @@ My work on this project focused on:
 * Express
 * PostgreSQL
 * Drizzle ORM
-* FAISS
+* FAISS / vector search concept
 * OpenAI API
 * Anthropic Claude API
 * Google Gemini API
 * DeepSeek API
 * GigaChat API
-* PDF processing
-* Knowledge base / retrieval workflow
+* document processing
+* knowledge base workflow
+* retrieval-based AI responses
+* prompt engineering
+* API integration
+* bot deployment workflow
 
 ## Architecture Overview
 
-The system is designed around several core layers:
+The system is designed around several core layers.
 
-1. **Web interface**
-   Used for creating bots, managing settings, uploading documents, testing responses and viewing analytics.
+### 1. Web Interface
 
-2. **Backend API**
-   Handles bot configuration, project data, knowledge base operations, LLM provider connections and application logic.
+The web interface is used to create bots, manage settings, upload documents, configure prompts, test responses and prepare deployment options.
 
-3. **Database layer**
-   Stores projects, bots, users, settings, logs and metadata.
+### 2. Backend API
 
-4. **Document processing layer**
-   Handles uploaded files, extracts text and prepares content for retrieval.
+The backend handles bot configuration, project data, knowledge base operations, LLM provider connections and application logic.
 
-5. **Knowledge base / retrieval layer**
-   Selects relevant context from processed documents and passes it to the LLM layer.
+### 3. Database Layer
 
-6. **LLM provider layer**
-   Provides a unified integration point for multiple LLM providers.
+The database stores projects, bots, user settings, metadata, logs and configuration data.
 
-7. **Testing, logs and analytics layer**
-   Helps test bot behavior, inspect responses and review usage patterns.
+### 4. Document Processing Layer
+
+The document-processing layer handles uploaded files, extracts text and prepares content for knowledge base search.
+
+### 5. Knowledge Base / Retrieval Layer
+
+The retrieval layer selects relevant context from processed documents and passes it to the LLM layer for grounded responses.
+
+### 6. LLM Provider Layer
+
+The LLM provider layer provides a unified integration point for multiple model providers.
+
+### 7. Testing and Observability Layer
+
+The testing, logs and analytics layer helps review bot behavior, inspect responses and monitor usage patterns.
 
 ## Main User Flow
 
 1. The user creates a new AI bot.
-2. The user uploads documents or business materials.
-3. The system processes the documents and prepares them for knowledge base search.
-4. The bot receives a user question.
-5. The retrieval layer selects relevant context.
-6. The LLM generates an answer using the selected context and bot settings.
-7. The user reviews the response, checks logs and improves the configuration if needed.
-
-
+2. The user defines the business use case and assistant description.
+3. The user selects an LLM provider and model.
+4. The user configures the system prompt.
+5. The user uploads business documents.
+6. The system prepares documents for knowledge base search.
+7. The user tests the assistant with realistic questions.
+8. The assistant generates answers based on bot settings and available knowledge.
+9. The user reviews the result and prepares the bot for publishing.
 
 ## Screenshots
 
@@ -172,38 +223,45 @@ Testing screen showing how the assistant responds to customer questions using th
 
 Deployment options for using the assistant as a web widget or Telegram bot.
 
-
 ## What This Project Demonstrates
 
-This project demonstrates my ability to work with applied AI product architecture, not only isolated API calls.
+This project demonstrates applied AI product architecture, not just isolated API calls.
 
 It shows experience with:
 
 * designing AI assistant workflows
 * structuring RAG-style knowledge base logic
 * planning backend architecture for AI products
-* integrating multiple LLM providers
-* building document-based AI flows
-* thinking through testing and observability
-* presenting private or partially private projects safely as a showcase
+* working with document-based AI flows
+* designing multi-provider LLM integration
+* configuring system prompts and assistant behavior
+* building product-style bot management workflows
+* thinking through testing, deployment and observability
+* presenting private AI projects safely as public portfolio case studies
 
-## Repository Status
+## Privacy and Security Notes
 
-This repository is a showcase repository.
+This repository is intentionally limited to safe public materials.
 
-It does not include:
+The following materials are not published:
 
-* production API keys
+* production source code
+* API keys
 * `.env` files
-* real user data
 * private prompts
+* real user data
+* customer documents
 * production databases
-* internal business workflows
-* sensitive logs
-* private infrastructure details
+* internal logs
+* private deployment configuration
+* sensitive business logic
 
-Additional technical details, architecture notes or workflow explanations can be provided separately when relevant.
+This approach keeps the showcase useful for portfolio review while protecting private implementation details.
 
 ## Related Skills
 
-Python, FastAPI, RAG, knowledge bases, LLM integration, AI assistants, backend architecture, document processing, retrieval workflows, API integrations, prompt engineering, product logic, logs and analytics.
+AI assistants, LLM integration, RAG systems, knowledge bases, vector search, document processing, prompt engineering, API integrations, backend architecture, product logic, Telegram bot deployment workflow, logs and analytics, AI product prototyping.
+
+## Additional Information
+
+Additional technical details, architecture notes or implementation explanations can be provided separately when relevant.
